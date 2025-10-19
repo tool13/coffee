@@ -6,6 +6,8 @@
 
 body {
     font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #707070;
     margin: 0;
 }
 
@@ -20,6 +22,15 @@ button {
     padding: 0;
     background-color: transparent;
     font-family: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 img {
@@ -42,6 +53,12 @@ img {
     color: #fff;
     background-color: transparent;
     text-decoration: underline;
+}
+
+.title {
+    font-size: 54px;
+    font-weight: 700;
+    color: #603809;
 }
 
 .container {
@@ -139,7 +156,53 @@ img {
     background-color: #F9C06A;
 }
 
+.about {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.about::before {
+    position: absolute;
+    content: "";
+    bottom: -150px;
+    left: 0;
+    width: 498px;
+    height: 272px;
+    background-image: url("images/coffee-blast.png");
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.about__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__inner {
+    max-width: 585px;
+}
+
+.about__text {
+    margin-top: 30px;
+    line-height: 1.7;
+    color: #707070;
+}
+
+.about__btn {
+    margin-top: 30px;
+}
+
 @media (max-width: 1080px) {
+    body {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
     .container {
         padding-left: 40px;
         padding-right: 40px;
@@ -147,6 +210,10 @@ img {
 
     .header__links {
         gap: 30px;
+    }
+
+    .about__inner {
+        max-width: 438px;
     }
 }
 
@@ -200,6 +267,19 @@ img {
     .header__reg {
         order: 2;
     }
+
+    .about {
+        margin-top: 0;
+        margin-bottom: 75px;
+    }
+
+    .about__wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .about__inner {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -210,5 +290,9 @@ img {
 
     .header__reg-btn {
         padding: 10px 14px;
+    }
+
+    .about::before {
+        bottom: -190px;
     }
 }
