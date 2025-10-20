@@ -334,6 +334,39 @@ img {
     margin-top: 24px;
 }
 
+.promo {
+    padding-top: 135px;
+    padding-bottom: 135px;
+    background-image: url("images/promo-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.promo__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo__inner {
+    max-width: 575px;
+}
+
+.promo__title {
+    color: #fff;
+}
+
+.promo__text {
+    max-width: 410px;
+    margin-top: 22px;
+    color: #fff;
+}
+
+.promo__btn {
+    margin-top: 22px;
+}
+
 @media (max-width: 1350px) {
     .features__name {
         font-size: 22px;
@@ -465,6 +498,18 @@ img {
 
     .features::before {
         top: -185px;
+    }
+}
+
+@media (max-width: 650px) {
+    .promo {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-position: left;
+    }
+
+    .promo__pic {
+        display: none;
     }
 }
 
